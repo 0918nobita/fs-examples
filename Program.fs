@@ -21,13 +21,16 @@ let () =
     let window = new Window("My first GTK# Application")
     window.Resize(width = 400, height = 300)
     window.Destroyed.AddHandler(new EventHandler(fun _ _ -> Application.Quit()))
-    
+
     let area = new Gtk.DrawingArea()
     area.Drawn.AddHandler(new DrawnHandler(fun _ args ->
         let cr = args.Cr
         cr.SetSourceColor(new Cairo.Color(0., 0., 0.))
-        cr.Rectangle(50., 50., 100., 100.)
-        cr.Stroke()))
+        cr.Rectangle(50., 50., 150., 100.)
+        cr.Stroke()
+        cr.MoveTo(75., 100.)
+        cr.SetFontSize(18.)
+        cr.ShowText("Hello, Cairo!")))
 
     let pane = new VPaned()
     pane.Pack1(child = area, resize = true, shrink = false)
