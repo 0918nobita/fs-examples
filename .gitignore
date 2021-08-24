@@ -2,3 +2,4 @@
 .ionide/
 obj/
 bin/
+.env
