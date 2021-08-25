@@ -19,13 +19,7 @@ pacman -S mingw-w64-x86_64-gcc mingw-w64-x86_64-openal
 ## ビルド
 
 ```bash
-dotnet fake build
-```
-
-### Release ビルド
-
-```bash
-dotnet fake build -t BuildFsRelease
+dotnet fsi build.fsx
 ```
 
 ### 生成物
@@ -41,12 +35,11 @@ dotnet run -p src/main # すでにビルド済みなら --no-build でビルド�
 ## Lint
 
 ```bash
-dotnet fake run lint.fsx
+dotnet fsi lint.fsx
 ```
 
 ## Format
 
 ```bash
-dotnet fantomas src/main
-clang-format -i src/cpp/*.cc
+dotnet fsi format.fsx
 ```

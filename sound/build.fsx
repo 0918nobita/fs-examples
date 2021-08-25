@@ -1,3 +1,5 @@
+#load "./shell.fsx"
+
 (*
 open Fake.Core
 open Fake.DotNet
