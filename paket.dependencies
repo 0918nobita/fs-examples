@@ -1,0 +1,21 @@
+version 5.257.0
+
+source https://api.nuget.org/v3/index.json
+
+storage: none
+framework: net5.0
+
+nuget FSharp.Core
+
+nuget FSharpPlus
+nuget FSLogger ~> 5.1.0
+nuget FsToolkit.ErrorHandling
+
+nuget GtkSharp
+
+// [ FAKE GROUP ]
+group NetcoreBuild
+    source https://api.nuget.org/v3/index.json
+
+    nuget Fake.Core.Target ~> 5.20.4
+    nuget Fake.DotNet.Cli ~> 5.20.4

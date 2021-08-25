@@ -2,10 +2,22 @@
   "version": 1,
   "isRoot": true,
   "tools": {
+    "paket": {
+      "version": "5.258.1",
+      "commands": [
+        "paket"
+      ]
+    },
     "fantomas-tool": {
       "version": "4.5.2",
       "commands": [
         "fantomas"
+      ]
+    },
+    "dotnet-fsharplint": {
+      "version": "0.19.2",
+      "commands": [
+        "dotnet-fsharplint"
       ]
     }
   }

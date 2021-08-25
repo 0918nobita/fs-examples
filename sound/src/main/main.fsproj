@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>fs_sound</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="PlayPulseWave.fsi" />
+    <Compile Include="PlayPulseWave.fs" />
+    <Compile Include="Units.fs" />
+    <Compile Include="MathExt.fs" />
+    <Compile Include="Pcm.fs" />
+    <Compile Include="PcmWriter.fs" />
+    <Compile Include="RenderSineWave.fsi" />
+    <Compile Include="RenderSineWave.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\openal\openal.fsproj" />
+  </ItemGroup>
+  <Import Project="..\..\..\.paket\Paket.Restore.targets" />
+</Project>

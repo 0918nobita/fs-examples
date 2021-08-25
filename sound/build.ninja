@@ -1,0 +1,6 @@
+flags = -O2 -Wall -Wextra
+
+rule cc-dylib
+    command = g++ $flags -shared -fPIC $in -lopenal -o $out
+
+build build/libmysound.so: cc-dylib src/cpp/mysound.cc

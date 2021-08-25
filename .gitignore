@@ -1,5 +1,15 @@
 .idea/
+.vscode/
+
 .ionide/
+
+.fake/
+.paket/
+packages/
+paket-files/
+
 obj/
 bin/
+
 .env
+*.wav
